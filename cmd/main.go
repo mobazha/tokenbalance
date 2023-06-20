@@ -3,8 +3,8 @@ package main
 
 import (
 	"fmt"
-	tb "github.com/hunterlong/tokenbalance"
 	"github.com/mkideal/cli"
+	tb "github.com/mobazha/tokenbalance"
 	"os"
 )
 

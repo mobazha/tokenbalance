@@ -11,13 +11,13 @@ sudo: required
 services:
   - docker
 
-go_import_path: github.com/hunterlong/tokenbalance
+go_import_path: github.com/mobazha/tokenbalance
 
 cache:
   directories:
   - $GOPATH/pkg/dep
   - ~/.cache
-  - $GOPATH/src/github.com/hunterlong/tokenbalance/vendor
+  - $GOPATH/src/github.com/mobazha/tokenbalance/vendor
 
 before_deploy:
   - git config --local user.name "hunterlong"

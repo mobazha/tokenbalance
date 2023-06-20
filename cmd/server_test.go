@@ -2,8 +2,8 @@ package main
 
 import (
 	"encoding/json"
-	tb "github.com/hunterlong/tokenbalance"
 	"github.com/mkideal/cli"
+	tb "github.com/mobazha/tokenbalance"
 	"github.com/stretchr/testify/assert"
 	"net/http"
 	"net/http/httptest"

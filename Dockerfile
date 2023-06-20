@@ -5,8 +5,8 @@ ENV DEP_VERSION v0.5.0
 RUN apk add --no-cache libstdc++ gcc g++ make git ca-certificates linux-headers curl
 RUN curl -L -s https://github.com/golang/dep/releases/download/$DEP_VERSION/dep-linux-amd64 -o /go/bin/dep && \
     chmod +x /go/bin/dep
-WORKDIR /go/src/github.com/hunterlong/tokenbalance
-ADD . /go/src/github.com/hunterlong/tokenbalance
+WORKDIR /go/src/github.com/mobazha/tokenbalance
+ADD . /go/src/github.com/mobazha/tokenbalance
 RUN make dep
 RUN make static
 
@@ -17,7 +17,7 @@ ARG VERSION
 RUN apk --no-cache add libstdc++ ca-certificates curl jq
 
 # make static
-COPY --from=base /go/src/github.com/hunterlong/tokenbalance/tokenbalance /usr/local/bin/tokenbalance
+COPY --from=base /go/src/github.com/mobazha/tokenbalance/tokenbalance /usr/local/bin/tokenbalance
 
 WORKDIR /app
 ENV GETH_SERVER https://eth.coinapp.io

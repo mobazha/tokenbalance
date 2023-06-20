@@ -1,4 +1,4 @@
-module github.com/hunterlong/tokenbalance
+module github.com/mobazha/tokenbalance
 
 go 1.19
 

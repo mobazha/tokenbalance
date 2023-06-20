@@ -1,7 +1,7 @@
 ![TokenBalance](http://i.imgur.com/43Blvht.jpg)
 
 
-# TokenBalance API [![Build Status](https://travis-ci.org/hunterlong/tokenbalance.svg?branch=master)](https://travis-ci.org/hunterlong/tokenbalance) [![Docker Build Status](https://img.shields.io/docker/build/hunterlong/tokenbalance.svg)](https://hub.docker.com/r/hunterlong/tokenbalance/) [![Coverage Status](https://coveralls.io/repos/github/hunterlong/tokenbalance/badge.svg?branch=master)](https://coveralls.io/github/hunterlong/tokenbalance?branch=master) [![GoDoc](https://godoc.org/github.com/golang/gddo?status.svg)](https://godoc.org/github.com/hunterlong/tokenbalance)
+# TokenBalance API [![Build Status](https://travis-ci.org/hunterlong/tokenbalance.svg?branch=master)](https://travis-ci.org/hunterlong/tokenbalance) [![Docker Build Status](https://img.shields.io/docker/build/hunterlong/tokenbalance.svg)](https://hub.docker.com/r/hunterlong/tokenbalance/) [![Coverage Status](https://coveralls.io/repos/github/hunterlong/tokenbalance/badge.svg?branch=master)](https://coveralls.io/github/hunterlong/tokenbalance?branch=master) [![GoDoc](https://godoc.org/github.com/golang/gddo?status.svg)](https://godoc.org/github.com/mobazha/tokenbalance)
 TokenBalance is an easy to use public API and application that will output your [ERC20 Token](https://github.com/ConsenSys/Tokens/blob/master/Token_Contracts/contracts/Token.sol) balance without any troubles. You can run TokenBalance on your local computer or you can use api.tokenbalance.com to easily parse your erc20 token balances.
 Connects to your local geth IPC and prints out a simple JSON response for ethereum token balances. Runs on port *8080* by default if you wish to run locally.
 
@@ -15,7 +15,7 @@ You can view the current status of Token Balance along with API latency informat
 [https://status.tokenbalance.com](https://status.tokenbalance.com)
 
 ## Installing Token Balance
-You don't need to compile Token Balance from source anymore! All you need to do is go to [Releases](https://github.com/hunterlong/tokenbalance/releases/latest) in this repo and download the binary that is built for your OS.
+You don't need to compile Token Balance from source anymore! All you need to do is go to [Releases](https://github.com/mobazha/tokenbalance/releases/latest) in this repo and download the binary that is built for your OS.
 Once you've downloaded, rename the file to `tokenbalance` for ease if use. On Mac or Linux move this file with the command `mv tokenbalance /usr/local/bin/tokenbalance`, you should be able to run the application from anywhere now.
 
 ## Token Balance and Token Info (/token)
@@ -79,13 +79,13 @@ docker run -p 8080:8080 -e GETH_SERVER=https://mainnet.infura.io/APIKEY -d hunte
 You can use Token Balance as a typical Go Language package if you you like to implement ERC20 functionality into your own application.
 
 ```bash
-go get github.com/hunterlong/tokenbalance
+go get github.com/mobazha/tokenbalance
 ```
 
 ###### First you'll want to connect to your Geth server or IPC
 ```go
 import (
-    "github.com/hunterlong/tokenbalance"
+    "github.com/mobazha/tokenbalance"
 )
 
 func main() {
@@ -134,7 +134,7 @@ TokenBalance isn't just an API, it's an opensource HTTP server that you can run 
 ## Installation
 ##### Ubuntu 16.04
 ```bash
-git clone https://github.com/hunterlong/tokenbalance
+git clone https://github.com/mobazha/tokenbalance
 cd tokenbalance
 go get && go build ./cmd
 ```
